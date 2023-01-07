@@ -1,0 +1,12 @@
+version: "3"
+services:
+  miapp:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/app
+      #- /home/ricardo/docker-examp/node-app:/home/app
+      #- /home/ricardo/docker-examp/node-app
+      # on linux -> .:/home/app
+    command: npm start
